@@ -1,0 +1,12 @@
+# Heavy / hardware-sensitive intelligence pack.
+# run_app.bat attempts this pack but does not block the core application if a wheel is unavailable.
+torch
+torchvision
+torch-geometric
+open3d>=0.18
+pymc>=6
+arviz
+jax
+numpyro
+sentence-transformers
+transformers

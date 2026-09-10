@@ -1,0 +1,34 @@
+version: 1
+governance:
+  project_specific_authority_over_generic_reference: true
+  preserve_original_source_files: true
+  class_c_auto_approval: false
+classification:
+  TEXT_CHANGED:
+    class: A
+    authority: AUTO_EXECUTE_VERIFY
+  LAYER_CHANGED:
+    class: A
+    authority: AUTO_EXECUTE_VERIFY
+  MOVED:
+    class: B
+    authority: PROPOSE_ONLY
+  GEOMETRY_CHANGED:
+    class: B
+    authority: PROPOSE_ONLY
+  ADDED:
+    class: B
+    authority: PROPOSE_ONLY
+  DELETED:
+    class: B
+    authority: PROPOSE_ONLY
+  DIMENSION_CHANGED:
+    class: C
+    authority: ENGINEERING_APPROVAL_REQUIRED
+  STRUCTURAL_OPENING_CHANGED:
+    class: C
+    authority: ENGINEERING_APPROVAL_REQUIRED
+approval:
+  class_A_requires_user_confirmation: true
+  class_B_requires_user_confirmation: true
+  class_C_requires_engineering_approval: true
