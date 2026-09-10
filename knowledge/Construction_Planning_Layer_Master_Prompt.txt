@@ -1,0 +1,4957 @@
+ADD ANOTHER LAYER
+
+Act as a world-class Senior Planning Manager, Primavera P6 Scheduling Engineer,
+
+Construction Manager, Project Controls Manager, Productivity Engineer,
+
+Resource Planning Engineer, Procurement Planner, Engineering Planner,
+
+Commissioning Planner, Contract Engineer, Delay Analyst, Data Architect,
+
+Python Architect, Full-Stack Software Engineer and Construction AI Systems Architect.
+
+
+
+PRIMARY OBJECTIVE
+
+
+
+Inspect, understand and upgrade the EXISTING Construction Planning Intelligence application.
+
+
+
+DO NOT rebuild the application from zero.
+
+
+
+DO NOT delete, replace, simplify, rename, overwrite or disable any existing working feature,
+
+engine, database, HTML tab, Python module, calculation, source record or workflow.
+
+
+
+IF SOMETHING ALREADY EXISTS:
+
+→ inspect it;
+
+→ understand exactly what it does;
+
+→ reuse it;
+
+→ improve it only where necessary;
+
+→ connect it to the pipeline.
+
+
+
+IF A NEW FEATURE IS REQUIRED:
+
+→ ADD it.
+
+
+
+The final application shall operate as one connected:
+
+
+
+PRIMAVERA P6 SCHEDULE ENGINEERING + PRODUCTIVITY + RESOURCE +
+
+CONSTRUCTABILITY + SCHEDULE BASIS + XER CREATION SYSTEM.
+
+
+
+======================================================================
+
+GOLDEN DATA RULE
+
+======================================================================
+
+
+
+PRESERVE FIRST
+
+→ NORMALIZE SECOND
+
+→ ANALYZE THIRD
+
+→ ENGINEER FOURTH
+
+→ CALCULATE FIFTH
+
+→ REVIEW SIXTH
+
+→ APPROVE SEVENTH
+
+→ EXPORT LAST.
+
+
+
+Never destroy source evidence.
+
+
+
+Never silently invent missing information.
+
+
+
+Never overwrite one source rate with another.
+
+
+
+Never convert blanks to zero.
+
+
+
+Never convert zero to blank.
+
+
+
+Never silently assume:
+
+- project quantity;
+
+- crew count;
+
+- calendar;
+
+- shift hours;
+
+- productivity basis;
+
+- material;
+
+- equipment capacity;
+
+- procurement duration;
+
+- engineering duration;
+
+- relationship;
+
+- lag;
+
+- constraint;
+
+- federal productivity;
+
+- USACE MII task;
+
+- activity duration.
+
+
+
+Unsupported information must remain:
+
+
+
+MISSING
+
+UNKNOWN
+
+UNRESOLVED
+
+REVIEW_REQUIRED
+
+
+
+depending on context.
+
+
+
+======================================================================
+
+MASTER APPLICATION PIPELINE
+
+======================================================================
+
+
+
+The application shall enforce and visually show this exact processing sequence:
+
+
+
+1. SOURCE UPLOAD
+
+        ↓
+
+2. DATA ANALYZER
+
+        ↓
+
+3. RAW EVIDENCE VAULT
+
+        ↓
+
+4. NORMALIZATION ENGINE
+
+        ↓
+
+5. MASTER ACTIVITY ENGINE
+
+        ↓
+
+6. WBS / CODING ENGINE
+
+        ↓
+
+7. ENGINEERING READINESS ENGINE
+
+        ↓
+
+8. PROCUREMENT ENGINE
+
+        ↓
+
+9. PRODUCTIVITY ENGINE
+
+        ↓
+
+10. CREW ENGINE
+
+        ↓
+
+11. EQUIPMENT ENGINE
+
+        ↓
+
+12. MATERIAL ENGINE
+
+        ↓
+
+13. QUANTITY + BASE-TIME ENGINE
+
+        ↓
+
+14. DURATION / MAN-HOUR ENGINE
+
+        ↓
+
+15. CONSTRUCTION SEQUENCING ENGINE
+
+        ↓
+
+16. MEP STAGE ENGINE
+
+        ↓
+
+17. AACE 38R-06 SCHEDULE BASIS ENGINE
+
+        ↓
+
+18. AACE 48R-06 CONSTRUCTABILITY ENGINE
+
+        ↓
+
+19. SCHEDULE QA / CONFLICT GATE
+
+        ↓
+
+20. USER / ENGINEER DECISION GATE
+
+        ↓
+
+21. PRIMAVERA SCHEDULE BUILDER
+
+        ↓
+
+22. XER VALIDATION
+
+        ↓
+
+23. XER CREATOR
+
+        ↓
+
+24. PRIMAVERA P6 NATIVE IMPORT
+
+        ↓
+
+25. P6 NATIVE CPM CALCULATION
+
+        ↓
+
+26. POST-P6 QA
+
+        ↓
+
+27. FINAL OUTPUTS
+
+
+
+XER CREATION IS NEAR THE END OF THE PIPELINE.
+
+
+
+The system must NEVER jump directly from raw uploaded files to XER without passing
+
+through the required engineering and review stages.
+
+
+
+======================================================================
+
+1. SOURCE UPLOAD
+
+======================================================================
+
+
+
+Support, where technically possible:
+
+
+
+PDF
+
+XLSX / XLSM
+
+CSV
+
+TXT
+
+DOCX
+
+XML
+
+XER
+
+JSON
+
+CAD-derived structured data where available
+
+
+
+Allow simultaneous project evidence including:
+
+
+
+Contract
+
+Conditions of Contract
+
+Employer Requirements
+
+Scope of Work
+
+BOQ
+
+Priced BOQ
+
+Specifications
+
+IFC Drawings
+
+Shop Drawings
+
+Method Statements
+
+Geotechnical Reports
+
+Topographic Surveys
+
+Utility Surveys
+
+Productivity PDFs
+
+Manpower PR
+
+Machinary PR
+
+Existing Primavera XER
+
+Tender Programme
+
+Baseline Programme
+
+Latest Update
+
+Engineering Registers
+
+Drawing Registers
+
+RFI Registers
+
+Material Registers
+
+Procurement Registers
+
+Long-Lead Registers
+
+ITPs
+
+QA/QC Records
+
+Commissioning Requirements
+
+Handover Requirements
+
+As-Built Requirements
+
+O&M Requirements
+
+Actual Productivity Records
+
+Daily Reports
+
+Weekly Reports
+
+Manpower Reports
+
+Equipment Reports
+
+
+
+Every uploaded source must receive:
+
+
+
+document_id
+
+original_filename
+
+file_type
+
+version
+
+hash
+
+upload_timestamp
+
+source_category
+
+parse_status
+
+source_confidence
+
+
+
+======================================================================
+
+2. DATA ANALYZER
+
+======================================================================
+
+
+
+Use the existing Data Analyzer.
+
+
+
+Improve by ADDITION only.
+
+
+
+The Data Analyzer must:
+
+
+
+detect document type;
+
+read all available evidence;
+
+extract scope;
+
+extract dates;
+
+extract milestones;
+
+extract quantities;
+
+extract calendars;
+
+extract contractual durations;
+
+extract review periods;
+
+extract engineering requirements;
+
+extract procurement durations;
+
+extract material information;
+
+extract productivity;
+
+extract crew composition;
+
+extract equipment;
+
+extract formulas;
+
+extract inspection requirements;
+
+extract commissioning requirements;
+
+extract handover requirements;
+
+extract restrictions;
+
+extract assumptions;
+
+extract interfaces.
+
+
+
+It must dynamically create tables according to available information.
+
+
+
+DO NOT rely on fixed tables only.
+
+
+
+Every extracted value must retain:
+
+
+
+source_document
+
+page
+
+sheet
+
+row
+
+cell
+
+original_text
+
+original_value
+
+original_formula
+
+evaluated_formula_value
+
+confidence
+
+status
+
+
+
+The analyzer must explicitly identify:
+
+
+
+AVAILABLE DATA
+
+MISSING DATA
+
+CONFLICTING DATA
+
+DUPLICATES
+
+UNRESOLVED DATA
+
+
+
+Never silently resolve genuine conflicts.
+
+
+
+======================================================================
+
+3. RAW EVIDENCE VAULT
+
+======================================================================
+
+
+
+Create immutable raw-source storage.
+
+
+
+Preserve:
+
+
+
+PDF rows
+
+Excel rows
+
+Excel cells
+
+Excel formulas
+
+Excel calculated values
+
+Original descriptions
+
+Original activity codes
+
+Original UOM
+
+Original spelling
+
+Original order
+
+Original rates
+
+Original zeros
+
+Original blanks
+
+Source revisions
+
+
+
+Required rule:
+
+
+
+RAW SOURCE DATA CAN NEVER BE EDITED.
+
+
+
+Corrections or normalization must be stored in separate layers.
+
+
+
+======================================================================
+
+4. NORMALIZATION ENGINE
+
+======================================================================
+
+
+
+Create normalized aliases without changing source evidence.
+
+
+
+Normalize:
+
+
+
+activity names
+
+discipline
+
+system
+
+subsystem
+
+material
+
+size
+
+diameter
+
+depth
+
+thickness
+
+UOM
+
+building
+
+floor
+
+zone
+
+area
+
+room
+
+location
+
+crew names
+
+labor-resource names
+
+equipment names
+
+
+
+Perform cross-source matching using more than activity text.
+
+
+
+Use, where available:
+
+
+
+description
+
+code
+
+UOM
+
+discipline
+
+system
+
+material
+
+diameter
+
+size
+
+depth
+
+method
+
+crew
+
+equipment
+
+project family
+
+
+
+Classify matches as:
+
+
+
+EXACT_MATCH
+
+LIKELY_MATCH
+
+SAME_ACTIVITY_DIFFERENT_METHOD
+
+SAME_ACTIVITY_DIFFERENT_RATE
+
+SAME_ACTIVITY_DIFFERENT_CREW
+
+SOURCE_DUPLICATE
+
+CONFLICT
+
+REVIEW_REQUIRED
+
+
+
+======================================================================
+
+5. MASTER ACTIVITY ENGINE
+
+======================================================================
+
+
+
+Build a reusable master activity library covering the entire project lifecycle.
+
+
+
+Top-level WBS:
+
+
+
+01 PROJECT MILESTONES
+
+02 PROJECT MANAGEMENT & PROJECT CONTROLS
+
+03 MOBILIZATION & TEMPORARY FACILITIES
+
+04 ENGINEERING & DESIGN
+
+05 PROCUREMENT
+
+06 PRE-CONSTRUCTION / ENABLING WORKS
+
+07 CIVIL & EARTHWORKS
+
+08 SUBSTRUCTURE
+
+09 SUPERSTRUCTURE
+
+10 ARCHITECTURAL WORKS
+
+11 MEP GENERAL
+
+12 HVAC
+
+13 PLUMBING & DRAINAGE
+
+14 FIRE FIGHTING
+
+15 ELECTRICAL
+
+16 ELV / ICT / SECURITY
+
+17 BMS / CONTROLS
+
+18 VERTICAL TRANSPORTATION
+
+19 EXTERNAL WORKS & INFRASTRUCTURE
+
+20 TESTING & COMMISSIONING
+
+21 AUTHORITY APPROVALS
+
+22 AS-BUILT DOCUMENTATION
+
+23 O&M / TRAINING / SPARES
+
+24 HANDOVER
+
+25 PROJECT CLOSEOUT
+
+
+
+Do not mechanically include every library activity in every project.
+
+
+
+Use evidence and project applicability.
+
+
+
+Each master activity must support:
+
+
+
+master_activity_id
+
+WBS
+
+Sub-WBS
+
+activity_name
+
+activity_aliases
+
+discipline
+
+system
+
+subsystem
+
+stage
+
+building
+
+floor
+
+zone
+
+area
+
+room
+
+method
+
+material
+
+size
+
+diameter
+
+depth
+
+thickness
+
+UOM
+
+source_activity_links
+
+
+
+======================================================================
+
+6. WBS / CODING ENGINE
+
+======================================================================
+
+
+
+Maintain multiple parallel coding systems.
+
+
+
+Use:
+
+
+
+UNIFORMAT II
+
+MasterFormat
+
+UFGS where verified
+
+Original Source Code
+
+Internal Scheduling Code
+
+
+
+Recommended internal coding format:
+
+
+
+[UNIFORMAT]-[MASTERFORMAT]-[DISCIPLINE]-[STAGE]-[OPERATION]-[SEQUENCE]
+
+
+
+Examples:
+
+
+
+G1030-31-CIV-EXC-001
+
+A1020-03-STR-RFT-RBR-001
+
+A1020-03-STR-RFT-FRM-001
+
+A1020-03-STR-RFT-CON-001
+
+D2020-22-PLB-1F-PIP-001
+
+D3040-23-HVAC-1F-DUCT-001
+
+D4010-21-FF-1F-PIP-001
+
+D5020-26-ELE-2F-CAB-001
+
+
+
+Never fabricate a UFGS section.
+
+
+
+If exact mapping cannot be established:
+
+
+
+UFGS_SECTION = REVIEW_REQUIRED
+
+
+
+Never fabricate USACE MII task IDs.
+
+
+
+======================================================================
+
+7. ENGINEERING READINESS ENGINE
+
+======================================================================
+
+
+
+For every construction activity determine required engineering predecessors.
+
+
+
+Possible sequence:
+
+
+
+Design Input
+
+→ Calculation
+
+→ Shop Drawing
+
+→ Coordination Drawing
+
+→ BIM / Clash Resolution
+
+→ Material Submittal
+
+→ Method Statement
+
+→ ITP
+
+→ Submission
+
+→ Review
+
+→ Comments
+
+→ Revision
+
+→ Approval
+
+→ IFC / Approved for Construction
+
+→ Workfront Release
+
+→ Construction
+
+
+
+Support:
+
+
+
+Civil
+
+Structural
+
+Architectural
+
+HVAC
+
+Plumbing
+
+Fire Fighting
+
+Electrical
+
+ELV
+
+BMS
+
+Infrastructure
+
+Vertical Transportation
+
+
+
+Use real review periods when available.
+
+
+
+Never invent review durations.
+
+
+
+======================================================================
+
+8. PROCUREMENT ENGINE
+
+======================================================================
+
+
+
+Use complete procurement lifecycle:
+
+
+
+Requirement
+
+→ MTO
+
+→ Technical Requisition
+
+→ RFQ
+
+→ Vendor Clarification
+
+→ Technical Bid Evaluation
+
+→ Commercial Evaluation
+
+→ Recommendation
+
+→ PO Approval
+
+→ Purchase Order
+
+→ Vendor Documents
+
+→ Manufacturing
+
+→ Inspection
+
+→ FAT
+
+→ Release
+
+→ Packing
+
+→ Shipping
+
+→ Customs
+
+→ Transport
+
+→ Site Delivery
+
+→ MIR
+
+→ Acceptance
+
+→ Storage
+
+→ Release for Installation
+
+
+
+Perform backward need-date analysis:
+
+
+
+CONSTRUCTION REQUIRED DATE
+
+minus
+
+PROCUREMENT LEAD TIME
+
+=
+
+LATEST SAFE PROCUREMENT START.
+
+
+
+Identify:
+
+
+
+PROCUREMENT_OK
+
+PROCUREMENT_TIGHT
+
+PROCUREMENT_LATE
+
+SOURCE_UNVERIFIED
+
+EARLY_DELIVERY_STORAGE_RISK
+
+
+
+======================================================================
+
+9. PRODUCTIVITY ENGINE
+
+======================================================================
+
+
+
+Preserve separately:
+
+
+
+PDF source productivity
+
+Excel Daily Production
+
+Source formula
+
+Company standard
+
+Project target
+
+Historical actual
+
+Project actual
+
+Engineering-derived value
+
+USACE MII fallback when REAL DATA IS AVAILABLE
+
+
+
+Do not store only one productivity value.
+
+
+
+Allowed rate basis:
+
+
+
+QUANTITY_PER_MANHOUR
+
+QUANTITY_PER_CREW_HOUR
+
+QUANTITY_PER_EQUIPMENT_HOUR
+
+MANHOURS_PER_QUANTITY
+
+QUANTITY_PER_SHIFT
+
+QUANTITY_PER_DAY
+
+CREW_DAILY_PRODUCTION
+
+EQUIPMENT_DAILY_PRODUCTION
+
+TIME_BASED
+
+ALLOWANCE
+
+UNKNOWN
+
+
+
+If source heading or rate meaning is ambiguous:
+
+
+
+RATE_BASIS = UNKNOWN
+
+
+
+No man-hour conversion until validated.
+
+
+
+======================================================================
+
+10. CREW ENGINE
+
+======================================================================
+
+
+
+Each crew must contain structured constituents.
+
+
+
+crew_id
+
+crew_name
+
+crew_source
+
+foreman
+
+skilled_workers
+
+helpers
+
+laborers
+
+operators
+
+support_resources
+
+total_resources
+
+shift_hours
+
+productive_hours
+
+hourly_output
+
+daily_output
+
+MH_per_unit
+
+crew_hours_per_unit
+
+confidence
+
+approval_status
+
+
+
+Crew source hierarchy:
+
+
+
+Project Actual
+
+→ Supplied Excel
+
+→ Approved Company Historical
+
+→ Actual USACE MII
+
+→ Engineering Derived
+
+
+
+Never create an apparently factual crew from engineering judgment without labeling it.
+
+
+
+======================================================================
+
+11. EQUIPMENT ENGINE
+
+======================================================================
+
+
+
+For every physical activity identify:
+
+
+
+primary equipment
+
+support equipment
+
+lifting equipment
+
+small plant
+
+testing equipment
+
+quantity
+
+capacity
+
+operator
+
+hours/day
+
+availability
+
+
+
+Keep Excel machinery quantities exactly as source evidence.
+
+
+
+Do not confuse equipment cost rate with production rate.
+
+
+
+======================================================================
+
+12. MATERIAL ENGINE
+
+======================================================================
+
+
+
+For every physical activity identify where supported:
+
+
+
+primary permanent material
+
+secondary materials
+
+accessories
+
+consumables
+
+temporary materials
+
+
+
+Material source hierarchy:
+
+
+
+BOQ
+
+→ Specification
+
+→ IFC
+
+→ Approved Material Submittal
+
+→ Supplied Source
+
+→ Applicable UFGS
+
+→ Actual MII
+
+→ Engineering Derived
+
+
+
+Project-specific data always takes precedence over generic planning data.
+
+
+
+======================================================================
+
+13. QUANTITY + BASE-TIME ENGINE
+
+======================================================================
+
+
+
+Required explicit inputs:
+
+
+
+Project Quantity
+
+UOM
+
+Quantity Source
+
+Number of Crews
+
+Shift Hours
+
+Calendar
+
+Productive Hours
+
+Utilization Factor if supported
+
+
+
+Never default crew count to 1.
+
+
+
+Never globally assume 8 hours/day.
+
+
+
+Never interpret constants such as 0.75 without evidence.
+
+
+
+======================================================================
+
+14. DURATION / MAN-HOUR ENGINE
+
+======================================================================
+
+
+
+If productivity is Quantity / Man-Hour:
+
+
+
+MH_PER_UNIT = 1 / PRODUCTIVITY
+
+
+
+TOTAL_MH =
+
+QUANTITY / PRODUCTIVITY
+
+
+
+If rate is Man-Hours / Quantity:
+
+
+
+TOTAL_MH =
+
+QUANTITY × RATE
+
+
+
+If validated Crew Daily Production exists:
+
+
+
+TOTAL_DAILY_PRODUCTION =
+
+CREW_DAILY_PRODUCTION × NUMBER_OF_CREWS
+
+
+
+DURATION =
+
+QUANTITY / TOTAL_DAILY_PRODUCTION
+
+
+
+LABOR_MH =
+
+LABOR_PER_CREW
+
+× NUMBER_OF_CREWS
+
+× SHIFT_HOURS
+
+× DURATION
+
+
+
+EQUIPMENT_HOURS =
+
+EQUIPMENT_UNITS_PER_CREW
+
+× NUMBER_OF_CREWS
+
+× OPERATING_HOURS
+
+× DURATION
+
+
+
+Store every calculation:
+
+
+
+formula
+
+input IDs
+
+input values
+
+source IDs
+
+engine version
+
+assumptions
+
+result
+
+approval status
+
+
+
+======================================================================
+
+15. CONSTRUCTION SEQUENCING ENGINE
+
+======================================================================
+
+
+
+Develop schedule logic from actual construction method.
+
+
+
+Relationship basis categories:
+
+
+
+PHYSICAL
+
+TECHNICAL
+
+ENGINEERING
+
+PROCUREMENT
+
+SAFETY
+
+ACCESS
+
+RESOURCE
+
+CREW_MOVEMENT
+
+EQUIPMENT_MOVEMENT
+
+FORMWORK_REUSE
+
+CONTRACTUAL
+
+AUTHORITY
+
+COMMISSIONING
+
+PREFERENTIAL
+
+EXTERNAL_INTERFACE
+
+
+
+For every relationship store:
+
+
+
+predecessor
+
+successor
+
+type
+
+lag
+
+logic_class
+
+logic_basis
+
+source
+
+review_status
+
+
+
+Prefer:
+
+
+
+FS
+
+SS
+
+FF
+
+
+
+Use SF only where technically justified.
+
+
+
+Do not automatically create lags when an explicit activity is more auditable.
+
+
+
+======================================================================
+
+16. MEP STAGE ENGINE
+
+======================================================================
+
+
+
+Mandatory hierarchy:
+
+
+
+BUILDING
+
+→ FLOOR
+
+→ ZONE
+
+→ ROOM / AREA
+
+→ SYSTEM
+
+→ INSTALLATION STAGE
+
+
+
+Stages:
+
+
+
+BUILDER'S WORK
+
+→ 1ST FIX
+
+→ 2ND FIX
+
+→ FINAL FIX
+
+→ TESTING
+
+→ PRE-COMMISSIONING
+
+→ COMMISSIONING
+
+→ INTEGRATED TESTING
+
+
+
+Apply separately to:
+
+
+
+HVAC
+
+Plumbing
+
+Fire Fighting
+
+Electrical
+
+ELV
+
+BMS
+
+
+
+======================================================================
+
+17. AACE 38R-06 SCHEDULE BASIS ENGINE
+
+======================================================================
+
+
+
+Use the existing dedicated AACE 38R-06 engine and MD knowledge.
+
+
+
+Review:
+
+
+
+Project description
+
+Schedule integration
+
+Scope
+
+WBS
+
+OBS / responsibility
+
+Execution strategy
+
+Contracting strategy
+
+Procurement strategy
+
+Key project dates
+
+Milestones
+
+Calendar basis
+
+Duration methodology
+
+Crew/resource basis
+
+Production-rate source
+
+Logic methodology
+
+Productivity adjustments
+
+Equipment utilization
+
+Long-lead basis
+
+Commissioning basis
+
+Authority requirements
+
+Critical path
+
+Path of execution
+
+Risks
+
+Assumptions
+
+Exclusions
+
+Exceptions
+
+Baseline reconciliation
+
+Schedule reserve
+
+Project buy-in
+
+P6 configuration
+
+Float rules
+
+Leads/lags
+
+Constraints
+
+Activity coding
+
+
+
+Important:
+
+
+
+AACE RP is GUIDANCE.
+
+
+
+Do not incorrectly represent it as a mandatory contractual standard.
+
+
+
+======================================================================
+
+18. AACE 48R-06 CONSTRUCTABILITY ENGINE
+
+======================================================================
+
+
+
+Use the existing dedicated AACE 48R-06 engine and MD knowledge.
+
+
+
+Review whether the schedule is physically buildable.
+
+
+
+Check:
+
+
+
+scope completeness
+
+sequence
+
+trade coordination
+
+engineering readiness
+
+procurement readiness
+
+work by others
+
+commissioning integration
+
+site access
+
+laydown/storage
+
+work restrictions
+
+weather
+
+manpower availability
+
+equipment limitations
+
+material availability
+
+long-lead items
+
+safety/security
+
+traffic/logistics
+
+heavy haul
+
+underground sequence
+
+temporary-facility removal
+
+QA/QC hold points
+
+demobilization
+
+appropriate level of detail
+
+building enclosure
+
+permanent systems used during construction
+
+preassembly/modularization
+
+
+
+Constructability issues must become findings.
+
+
+
+Do not silently modify source schedule data.
+
+
+
+======================================================================
+
+19. SCHEDULE QA / CONFLICT GATE
+
+======================================================================
+
+
+
+Run automatic QA before schedule export.
+
+
+
+Check at minimum:
+
+
+
+Duplicate Activity IDs
+
+Missing Activity Names
+
+Missing Durations
+
+Missing Quantity
+
+Unknown Rate Basis
+
+Missing Crew Basis
+
+Missing Calendar
+
+Open Ends
+
+Missing Predecessor
+
+Missing Successor
+
+Invalid Relationship
+
+Excessive Leads
+
+Excessive Lags
+
+Hard Constraints
+
+Soft Constraints
+
+Multiple Calendars
+
+Out-of-Sequence Logic
+
+Engineering Not Ready
+
+Procurement Not Ready
+
+Material Not Ready
+
+Access Conflict
+
+Resource Conflict
+
+Equipment Conflict
+
+Constructability Conflict
+
+Commissioning Gap
+
+Authority Gap
+
+Handover Gap
+
+Demobilization Gap
+
+
+
+Create a visible issue register.
+
+
+
+======================================================================
+
+20. USER / ENGINEER DECISION GATE
+
+======================================================================
+
+
+
+Any unresolved technical decision requiring engineering judgment must be presented to the user.
+
+
+
+Allowed decisions:
+
+
+
+ACCEPT
+
+MODIFY
+
+REJECT
+
+HOLD
+
+REVIEW_REQUIRED
+
+
+
+Show:
+
+
+
+issue
+
+evidence
+
+engine recommendation
+
+possible alternatives
+
+schedule effect
+
+reason
+
+confidence
+
+
+
+Do not silently choose between conflicting valid alternatives.
+
+
+
+======================================================================
+
+21. PRIMAVERA SCHEDULE BUILDER
+
+======================================================================
+
+
+
+After approval, assemble:
+
+
+
+Project
+
+EPS/Project identity where applicable
+
+Calendar
+
+WBS
+
+Activities
+
+Activity IDs
+
+Activity Names
+
+Activity Types
+
+Original Durations
+
+Relationships
+
+Lags
+
+Milestones
+
+Activity Codes
+
+Resources
+
+Costs where required
+
+Quantities
+
+Crew information
+
+Engineering predecessors
+
+Procurement predecessors
+
+Testing/commissioning successors
+
+Handover successors
+
+
+
+Create one auditable pre-XER schedule model.
+
+
+
+======================================================================
+
+22. XER VALIDATION
+
+======================================================================
+
+
+
+The XER validation engine must independently check:
+
+
+
+project data
+
+calendar data
+
+WBS
+
+task IDs
+
+task names
+
+activity types
+
+durations
+
+relationships
+
+relationship types
+
+lags
+
+required IDs
+
+duplicate IDs
+
+missing references
+
+
+
+Separate:
+
+
+
+XER_STRUCTURE_VALID
+
+
+
+from:
+
+
+
+SCHEDULE_QUALITY_APPROVED
+
+
+
+A technically valid XER may still have planning issues.
+
+
+
+======================================================================
+
+23. XER CREATOR
+
+======================================================================
+
+
+
+Use the existing:
+
+
+
+primavera_xer_creator.py
+
+
+
+Improve only by ADDITION.
+
+
+
+The XER creator must create a downloadable `.xer`.
+
+
+
+Current core output should include:
+
+
+
+CALENDAR
+
+PROJECT
+
+PROJWBS
+
+TASK
+
+TASKPRED
+
+
+
+Extend support where justified for:
+
+
+
+Activity Codes
+
+Resources
+
+Resource Assignments
+
+Cost Loading
+
+Additional Calendars
+
+Constraints
+
+Project-specific P6 fields
+
+
+
+Do not create unsupported fields merely to make the XER larger.
+
+
+
+======================================================================
+
+24. PRIMAVERA P6 NATIVE IMPORT
+
+======================================================================
+
+
+
+The generated XER is a schedule exchange/staging output.
+
+
+
+Final scheduling authority is Primavera P6.
+
+
+
+The app must clearly instruct:
+
+
+
+IMPORT XER INTO CONTROLLED P6 COPY.
+
+
+
+Never claim the Python engine perfectly reproduces every internal Primavera calculation.
+
+
+
+======================================================================
+
+25. P6 NATIVE CPM CALCULATION
+
+======================================================================
+
+
+
+Primavera P6 should determine, after native scheduling:
+
+
+
+Early Start
+
+Early Finish
+
+Late Start
+
+Late Finish
+
+Total Float
+
+Free Float
+
+Critical Path
+
+Near-Critical Paths
+
+Longest Path
+
+Calendar effects
+
+Constraint effects
+
+Relationship effects
+
+Resource-leveling effects where used
+
+
+
+======================================================================
+
+26. POST-P6 QA
+
+======================================================================
+
+
+
+After re-importing/exporting the P6 schedule if possible, compare:
+
+
+
+Expected activities
+
+vs
+
+Imported activities
+
+
+
+Expected WBS
+
+vs
+
+Imported WBS
+
+
+
+Expected durations
+
+vs
+
+Imported durations
+
+
+
+Expected logic
+
+vs
+
+Imported logic
+
+
+
+Expected calendars
+
+vs
+
+Imported calendars
+
+
+
+Expected milestones
+
+vs
+
+Imported milestones
+
+
+
+Expected project finish
+
+vs
+
+P6 project finish
+
+
+
+Also review:
+
+
+
+critical path
+
+near-critical path
+
+total float
+
+longest path
+
+constraints
+
+calendar assignment
+
+open ends
+
+data loss
+
+
+
+Generate:
+
+
+
+PASS
+
+PASS_WITH_COMMENTS
+
+REVIEW_REQUIRED
+
+FAIL
+
+
+
+======================================================================
+
+27. FINAL OUTPUTS
+
+======================================================================
+
+
+
+Provide downloadable outputs appropriate to the data available:
+
+
+
+Final XER
+
+Schedule Basis Report
+
+Constructability Review
+
+Schedule Narrative
+
+WBS
+
+Activity Register
+
+Logic Register
+
+Milestone Register
+
+Missing Data Register
+
+Assumption Register
+
+Conflict Register
+
+Engineering Schedule
+
+Procurement Schedule
+
+Construction Schedule
+
+Commissioning Schedule
+
+Productivity Report
+
+Crew Report
+
+Equipment Report
+
+Material Report
+
+Man-Hour Report
+
+Resource Histogram
+
+Critical Path Narrative
+
+QA Report
+
+Source Traceability Report
+
+Revision History
+
+
+
+======================================================================
+
+APP UI / PIPELINE
+
+======================================================================
+
+
+
+The existing HTML shall remain.
+
+
+
+DO NOT remove existing tabs.
+
+
+
+Add or connect tabs where needed.
+
+
+
+Recommended application navigation order:
+
+
+
+01 Data Analyzer
+
+02 Master Prompt
+
+03 Activity Library
+
+04 Coding / WBS
+
+05 Engineering
+
+06 Procurement
+
+07 Productivity
+
+08 Crews
+
+09 Equipment
+
+10 Materials
+
+11 Quantity & Duration
+
+12 Schedule Logic
+
+13 AACE 38R-06 Schedule Basis
+
+14 AACE 48R-06 Constructability
+
+15 Schedule QA
+
+16 Primavera Schedule Builder
+
+17 XER Creator
+
+18 Post-P6 QA
+
+19 Final Outputs
+
+
+
+Provide a visible pipeline/status bar showing:
+
+
+
+NOT STARTED
+
+DATA AVAILABLE
+
+ANALYZED
+
+REVIEW REQUIRED
+
+APPROVED
+
+READY FOR XER
+
+XER CREATED
+
+P6 VERIFIED
+
+
+
+======================================================================
+
+SOURCE LINEAGE
+
+======================================================================
+
+
+
+Every final schedule value must be able to answer:
+
+
+
+WHAT IS THIS?
+
+WHY IS IT HERE?
+
+WHAT SOURCE CREATED IT?
+
+WHERE IN THE SOURCE?
+
+WHAT ORIGINAL VALUE?
+
+WHAT NORMALIZED VALUE?
+
+WHAT FORMULA?
+
+WHAT ASSUMPTION?
+
+WHAT CREW?
+
+WHAT EQUIPMENT?
+
+WHAT MATERIAL?
+
+WHAT CALENDAR?
+
+WHAT PRODUCTIVITY?
+
+WHAT QUANTITY?
+
+WHAT LOGIC BASIS?
+
+WHO APPROVED IT?
+
+WHAT REVISION?
+
+
+
+If this cannot be answered, mark the record REVIEW_REQUIRED.
+
+
+
+======================================================================
+
+DATABASE DESIGN
+
+======================================================================
+
+
+
+Use normalized relational storage with immutable source evidence.
+
+
+
+At minimum support:
+
+
+
+raw_documents
+
+raw_pdf_records
+
+raw_excel_cells
+
+raw_excel_rows
+
+raw_formulas
+
+
+
+master_activity
+
+activity_alias
+
+project_activity
+
+
+
+productivity_rate
+
+crew_master
+
+crew_resource
+
+resource_master
+
+equipment_master
+
+crew_equipment
+
+material_master
+
+activity_material
+
+
+
+engineering_requirement
+
+engineering_deliverable
+
+procurement_package
+
+procurement_activity
+
+
+
+schedule_relationship
+
+calendar_master
+
+milestone_master
+
+
+
+constructability_finding
+
+schedule_basis_record
+
+
+
+assumption_register
+
+missing_data
+
+conflict_register
+
+approval_record
+
+revision_history
+
+
+
+xer_export
+
+p6_verification
+
+
+
+Do not store complex reusable information only as display text.
+
+
+
+======================================================================
+
+ENGINE GOVERNANCE
+
+======================================================================
+
+
+
+Maintain explicit provenance:
+
+
+
+PDF_SOURCE
+
+EXCEL_SOURCE
+
+SOURCE_FORMULA
+
+NORMALIZED
+
+CALCULATED
+
+ENGINEERING_DERIVED
+
+USER_INPUT
+
+USER_APPROVED
+
+HISTORICAL_ACTUAL
+
+COMPANY_STANDARD
+
+PROJECT_TARGET
+
+USACE_MII
+
+UFGS
+
+UNIFORMAT_II
+
+MASTERFORMAT
+
+UNRESOLVED
+
+
+
+Maintain approval status:
+
+
+
+RAW
+
+EXTRACTED
+
+NORMALIZED
+
+REVIEW_REQUIRED
+
+ENGINEER_REVIEWED
+
+APPROVED
+
+SUPERSEDED
+
+REJECTED
+
+
+
+======================================================================
+
+NO-DELETION RULE
+
+======================================================================
+
+
+
+This requirement has the highest priority.
+
+
+
+BEFORE MODIFYING ANY EXISTING FILE:
+
+
+
+1. inspect it fully;
+
+2. understand its current function;
+
+3. identify dependencies;
+
+4. create additive architecture where possible;
+
+5. preserve working behavior;
+
+6. preserve source data;
+
+7. preserve APIs unless extension requires additions;
+
+8. preserve existing UI unless adding new navigation/features.
+
+
+
+Never remove a feature merely because the new architecture replaces its purpose conceptually.
+
+
+
+Connect the existing feature instead.
+
+
+
+======================================================================
+
+QUALITY ACCEPTANCE TEST
+
+======================================================================
+
+
+
+The upgrade is complete only when all of the following pass:
+
+
+
+[ ] Existing features still work.
+
+[ ] Existing activity source data remain recoverable.
+
+[ ] Existing PDF rates remain recoverable.
+
+[ ] Excel manpower data remain recoverable.
+
+[ ] Excel machinery data remain recoverable.
+
+[ ] Original formulas remain recoverable.
+
+[ ] Blank and zero remain distinct.
+
+[ ] Full WBS lifecycle exists.
+
+[ ] Coding engine exists.
+
+[ ] Engineering workflow exists.
+
+[ ] Procurement workflow exists.
+
+[ ] Productivity engine exists.
+
+[ ] Crew engine exists.
+
+[ ] Equipment engine exists.
+
+[ ] Material engine exists.
+
+[ ] Quantity-to-duration engine exists.
+
+[ ] MEP stages exist.
+
+[ ] AACE 38R-06 review exists.
+
+[ ] AACE 48R-06 constructability review exists.
+
+[ ] Conflict gate exists.
+
+[ ] User decision gate exists.
+
+[ ] Primavera schedule model exists.
+
+[ ] XER validation works.
+
+[ ] XER download works.
+
+[ ] P6 native verification requirement is explicit.
+
+[ ] Source lineage works.
+
+[ ] Revision history works.
+
+[ ] Missing information is visible.
+
+[ ] Unsupported federal rates are never invented.
+
+[ ] Unsupported assumptions are never silently inserted.
+
+
+
+======================================================================
+
+IMPLEMENTATION DELIVERABLES
+
+======================================================================
+
+
+
+Inspect the existing project first.
+
+
+
+Then provide:
+
+
+
+1. Architecture assessment of what already exists.
+
+2. Existing-function reuse map.
+
+3. Gap analysis against this pipeline.
+
+4. Implementation plan.
+
+5. Updated Python engines.
+
+6. Updated API integration.
+
+7. Updated HTML/UI.
+
+8. Database/schema additions if required.
+
+9. Primavera schedule builder.
+
+10. Working XER creator.
+
+11. AACE 38R-06 engine integration.
+
+12. AACE 48R-06 engine integration.
+
+13. Schedule QA engine.
+
+14. User decision workflow.
+
+15. Automated tests.
+
+16. Self-test results.
+
+17. Example project verification.
+
+18. Downloadable final package.
+
+
+
+Do not stop after writing recommendations.
+
+
+
+IMPLEMENT THE WORKING SYSTEM.
+
+
+
+======================================================================
+
+FINAL SYSTEM OBJECTIVE
+
+======================================================================
+
+
+
+The final application must be capable of taking fragmented construction evidence
+
+and progressively converting it into:
+
+
+
+RAW EVIDENCE
+
+
+
+→ VERIFIED PROJECT DATA
+
+
+
+→ ENGINEERED PROJECT WBS
+
+
+
+→ COMPLETE ACTIVITY NETWORK
+
+
+
+→ VERIFIED ENGINEERING REQUIREMENTS
+
+
+
+→ VERIFIED PROCUREMENT REQUIREMENTS
+
+
+
+→ PRODUCTIVITY / CREW / EQUIPMENT / MATERIAL MODEL
+
+
+
+→ CALCULATED DURATIONS AND MAN-HOURS
+
+
+
+→ CONSTRUCTIBLE SEQUENCE
+
+
+
+→ AACE SCHEDULE-BASIS REVIEW
+
+
+
+→ AACE CONSTRUCTABILITY REVIEW
+
+
+
+→ SCHEDULE QA
+
+
+
+→ ENGINEER APPROVAL
+
+
+
+→ PRIMAVERA P6 SCHEDULE MODEL
+
+
+
+→ VALIDATED XER
+
+
+
+→ DOWNLOADABLE XER
+
+
+
+→ NATIVE PRIMAVERA P6 CPM VERIFICATION
+
+
+
+→ FINAL PROFESSIONAL BASELINE / REVISED SCHEDULE PACKAGE.
+
+
+
+NO SOURCE DATA LOSS.
+
+NO SILENT ASSUMPTIONS.
+
+NO INVENTED PRODUCTIVITY.
+
+NO INVENTED FEDERAL RATES.
+
+NO INVENTED CREWS PRESENTED AS FACT.
+
+NO DESTRUCTIVE OVERWRITE.
+
+FULL TRACEABILITY.
+
+FULL REVISION HISTORY.
+
+FULL PROJECT-LIFECYCLE COVERAGE.
+
+======================================================================
+28. MACHINE LEARNING & CONTINUOUS LEARNING ENGINE
+======================================================================
+
+ADD a genuine probabilistic Machine Learning architecture to the existing
+Construction Planning Intelligence + Primavera P6 + XER Creator system.
+
+DO NOT replace the deterministic engineering engines.
+
+The final architecture shall be:
+
+SOURCE EVIDENCE
+        ↓
+DETERMINISTIC DATA ANALYSIS
+        ↓
+ENGINEERING / PLANNING RULES
+        ↓
+MACHINE LEARNING INTELLIGENCE
+        ↓
+CONFIDENCE / UNCERTAINTY GATE
+        ↓
+HUMAN ENGINEER REVIEW
+        ↓
+APPROVED DECISION
+        ↓
+PRIMAVERA SCHEDULE MODEL
+        ↓
+XER
+        ↓
+PRIMAVERA P6
+        ↓
+ACTUAL PROJECT RESULTS
+        ↓
+LEARNING FEEDBACK LOOP
+
+Machine Learning is an INTELLIGENCE and RECOMMENDATION layer.
+
+It must NEVER have unrestricted authority to silently modify:
+
+raw evidence;
+contract requirements;
+approved quantities;
+source productivity;
+approved activity logic;
+approved calendars;
+approved milestones;
+approved schedule revisions;
+or Primavera results.
+
+======================================================================
+29. MEANING OF "LEARN 100%"
+======================================================================
+
+The objective is NOT to falsely claim 100% predictive accuracy.
+
+Instead, implement:
+
+100% CAPTURE OF ELIGIBLE APPROVED LEARNING RECORDS.
+
+Every valid approved historical result should be capable of entering the
+learning dataset.
+
+The system should continuously improve as more verified evidence becomes
+available.
+
+Track real model performance mathematically.
+
+Never display:
+
+"100% accurate"
+
+unless an actual independent validation dataset mathematically produces
+that result.
+
+The system must distinguish:
+
+DATA CAPTURE COMPLETENESS
+MODEL TRAINING COMPLETENESS
+MODEL VALIDATION PERFORMANCE
+MODEL CONFIDENCE
+MODEL GENERALIZATION
+DATASET COVERAGE
+
+These are different concepts.
+
+======================================================================
+30. MACHINE LEARNING MATHEMATICAL FOUNDATION
+======================================================================
+
+The ML architecture shall correctly use the mathematical concepts needed
+for model development.
+
+Support understanding and implementation of:
+
+LINEAR ALGEBRA
+
+Vectors
+Matrices
+Matrix multiplication
+Dot products
+Feature matrices
+Weight vectors
+Transformations
+Distance calculations
+
+STATISTICS
+
+Mean
+Median
+Variance
+Standard deviation
+Covariance
+Correlation
+Percentiles
+Distributions
+Outliers
+Sampling
+Confidence intervals
+
+PROBABILITY
+
+Conditional probability
+Bayes theorem
+Likelihood
+Posterior probability
+Probability distributions
+Classification probability
+Uncertainty estimation
+
+CALCULUS
+
+Derivatives
+Partial derivatives
+Gradients
+Gradient descent
+Loss-function optimization
+
+The application user does not need to manually perform these calculations.
+
+They belong inside the ML engine.
+
+======================================================================
+31. CORE PYTHON ML STACK
+======================================================================
+
+Use production-quality Python libraries.
+
+NUMERICAL COMPUTING
+
+NumPy
+
+TABULAR DATA
+
+Pandas
+
+VISUAL ANALYSIS
+
+Matplotlib
+Seaborn where appropriate in the application environment
+
+CLASSICAL MACHINE LEARNING
+
+Scikit-learn
+
+Support, where justified:
+
+LinearRegression
+LogisticRegression
+RandomForestClassifier
+RandomForestRegressor
+GradientBoosting
+ExtraTrees
+HistGradientBoosting
+IsolationForest
+KMeans
+PCA
+
+OPTIONAL ADVANCED MODELS
+
+XGBoost
+LightGBM
+CatBoost
+
+DEEP LEARNING
+
+PyTorch
+
+TensorFlow only where genuinely justified.
+
+Do NOT add deep learning merely to make the system appear more advanced.
+
+Use the simplest model that performs reliably for the task.
+
+======================================================================
+32. MACHINE LEARNING PROBLEM TYPES
+======================================================================
+
+Support multiple learning modes.
+
+------------------------------
+A. SUPERVISED REGRESSION
+------------------------------
+
+Use when predicting numeric values.
+
+Possible construction applications:
+
+Productivity
+Daily Production
+MH / Unit
+Crew Output
+Activity Duration
+Remaining Duration
+Equipment Output
+Procurement Lead Time
+Engineering Review Duration
+Potential Delay Duration
+Forecast Finish Risk
+Manpower Demand
+Equipment Demand
+Cost Exposure
+
+------------------------------
+B. SUPERVISED CLASSIFICATION
+------------------------------
+
+Use when predicting categories.
+
+Examples:
+
+Activity Discipline
+Activity Family
+WBS Category
+Rate Basis
+Crew Type
+Equipment Type
+Delay Event Type
+Schedule Risk Category
+Constructability Finding Type
+Engineering Requirement
+Procurement Requirement
+Likely Criticality
+Schedule QA Finding
+Source Document Type
+
+------------------------------
+C. UNSUPERVISED LEARNING
+------------------------------
+
+Use when labels do not exist.
+
+Support:
+
+K-Means
+Hierarchical clustering where justified
+PCA
+Anomaly detection
+
+Applications may include:
+
+similar activity grouping;
+similar project grouping;
+crew-pattern discovery;
+productivity-pattern discovery;
+schedule anomaly detection;
+unusual duration identification;
+unusual logic identification;
+historical project clustering.
+
+======================================================================
+33. ML DATASET ARCHITECTURE
+======================================================================
+
+Never train directly on uncontrolled raw application tables.
+
+Create controlled ML datasets.
+
+Required dataset layers:
+
+RAW ML CANDIDATES
+        ↓
+ELIGIBILITY CHECK
+        ↓
+QUALITY CHECK
+        ↓
+LABEL VALIDATION
+        ↓
+ENGINEER APPROVAL
+        ↓
+TRAINING DATASET
+        ↓
+TRAIN / VALIDATION / TEST
+        ↓
+MODEL
+        ↓
+PRODUCTION INFERENCE
+
+Each ML record should retain:
+
+ml_record_id
+project_id
+activity_id
+source_record_ids
+feature_values
+target_value
+target_source
+label_source
+approval_status
+data_quality_score
+evidence_confidence
+created_date
+training_eligible
+training_reason
+dataset_version
+
+Never lose the connection between a training record and the project evidence
+from which it came.
+
+======================================================================
+34. TRAIN / VALIDATION / TEST GOVERNANCE
+======================================================================
+
+Never evaluate a model only on the same data used for training.
+
+Use:
+
+TRAINING SET
+VALIDATION SET
+TEST SET
+
+Where appropriate use:
+
+train_test_split
+
+and:
+
+cross-validation.
+
+For construction projects, avoid data leakage.
+
+If activities from the same project are highly correlated, consider:
+
+GroupKFold
+
+or project-level train/test splitting.
+
+Do not randomly place almost-identical records from the same activity/project
+into both train and test sets if that would create misleading performance.
+
+The system must detect:
+
+DATA LEAKAGE
+TARGET LEAKAGE
+PROJECT LEAKAGE
+DUPLICATE RECORD LEAKAGE
+
+======================================================================
+35. FEATURE ENGINEERING ENGINE
+======================================================================
+
+Feature engineering is a first-class subsystem.
+
+Potential schedule/activity features include:
+
+project type
+project sector
+discipline
+WBS
+activity family
+system
+subsystem
+building
+floor
+zone
+location
+quantity
+UOM
+material
+diameter
+size
+depth
+thickness
+height
+soil type
+construction method
+crew type
+crew size
+equipment type
+equipment count
+equipment capacity
+shift hours
+productive hours
+weather conditions
+access condition
+congestion
+number of crews
+historical productivity
+selected productivity
+engineering status
+procurement status
+material status
+workfront status
+calendar
+relationship count
+predecessor count
+successor count
+lag values
+constraint type
+total float
+critical status
+
+Categorical variables must be properly encoded.
+
+Numerical variables may be:
+
+imputed;
+scaled;
+transformed;
+
+only when required by the selected model.
+
+Do not scale values unnecessarily for models that do not require scaling.
+
+======================================================================
+36. REUSABLE SCIKIT-LEARN PIPELINES
+======================================================================
+
+Use:
+
+sklearn.pipeline.Pipeline
+
+and:
+
+ColumnTransformer
+
+where appropriate.
+
+Typical architecture:
+
+RAW DATA
+        ↓
+FEATURE SELECTION
+        ↓
+MISSING VALUE IMPUTATION
+        ↓
+CATEGORICAL ENCODING
+        ↓
+NUMERICAL SCALING IF NEEDED
+        ↓
+OPTIONAL PCA
+        ↓
+MODEL
+
+The preprocessing pipeline and model must be versioned together.
+
+Never train with one preprocessing method and infer with another.
+
+======================================================================
+37. PCA / DIMENSIONALITY REDUCTION
+======================================================================
+
+Support PCA where it improves modeling.
+
+Do NOT apply PCA automatically.
+
+Evaluate whether PCA improves:
+
+generalization;
+training stability;
+runtime;
+noise reduction.
+
+Retain original feature explainability where project-control users need to
+understand decisions.
+
+If PCA makes an engineering recommendation impossible to explain, prefer an
+interpretable alternative unless performance improvement justifies its use.
+
+======================================================================
+38. MODEL TRAINING WORKFLOW
+======================================================================
+
+The standard ML workflow shall be:
+
+LOAD DATA
+        ↓
+PROFILE DATA
+        ↓
+DATA QUALITY CHECK
+        ↓
+REMOVE / FLAG INVALID RECORDS
+        ↓
+HANDLE MISSING VALUES
+        ↓
+FEATURE ENGINEERING
+        ↓
+LABEL VALIDATION
+        ↓
+SPLIT TRAIN / VALIDATION / TEST
+        ↓
+CREATE PIPELINE
+        ↓
+TRAIN
+        ↓
+CROSS-VALIDATE
+        ↓
+EVALUATE
+        ↓
+HYPERPARAMETER TUNING
+        ↓
+TEST ON UNSEEN DATA
+        ↓
+CALIBRATE CONFIDENCE
+        ↓
+MODEL REVIEW
+        ↓
+APPROVE MODEL
+        ↓
+MODEL REGISTRY
+        ↓
+PRODUCTION USE
+
+======================================================================
+39. MODEL EVALUATION
+======================================================================
+
+For classification track, where applicable:
+
+Accuracy
+Precision
+Recall
+F1 Score
+Confusion Matrix
+ROC-AUC
+PR-AUC
+Log Loss
+Calibration
+
+For regression track:
+
+MAE
+MSE
+RMSE
+R²
+MAPE where mathematically appropriate
+Median Absolute Error
+Prediction error distribution
+
+Do not rely on one metric.
+
+Construction decision models should be evaluated according to the cost of
+false positives and false negatives.
+
+Example:
+
+Incorrectly classifying an activity discipline may be low risk.
+
+Incorrectly predicting a procurement package as ready when it is actually late
+may be high risk.
+
+Evaluation thresholds should therefore be task-specific.
+
+======================================================================
+40. CROSS-VALIDATION
+======================================================================
+
+Support:
+
+KFold
+StratifiedKFold
+GroupKFold
+TimeSeriesSplit
+
+Choose based on the dataset structure.
+
+Typical default:
+
+5-fold cross-validation
+
+ONLY when statistically appropriate.
+
+Do not blindly use 5-fold CV for every dataset.
+
+For chronological productivity data, consider time-aware validation.
+
+For multiple projects, consider project-group validation.
+
+======================================================================
+41. HYPERPARAMETER OPTIMIZATION
+======================================================================
+
+Support:
+
+GridSearchCV
+
+and where useful:
+
+RandomizedSearchCV.
+
+Possible Random Forest parameters include:
+
+n_estimators
+max_depth
+min_samples_split
+min_samples_leaf
+max_features
+class_weight
+
+Possible PCA parameters include:
+
+n_components
+
+Store:
+
+search_space
+best_parameters
+best_validation_score
+model_version
+dataset_version
+training_timestamp
+
+Do not optimize against the final test set.
+
+======================================================================
+42. OVERFITTING / UNDERFITTING ENGINE
+======================================================================
+
+Automatically diagnose:
+
+OVERFITTING
+
+training performance significantly better than validation/test performance.
+
+UNDERFITTING
+
+poor performance on both training and validation data.
+
+Report:
+
+training_score
+validation_score
+test_score
+generalization_gap
+
+Possible remedies include:
+
+feature engineering;
+model complexity adjustment;
+regularization;
+more training evidence;
+less noisy features;
+better labels;
+cross-validation;
+different algorithm.
+
+Never solve overfitting by leaking test data into training.
+
+======================================================================
+43. MACHINE LEARNING TASK — ACTIVITY CLASSIFICATION
+======================================================================
+
+Train a probabilistic classifier to classify activities into:
+
+discipline
+WBS
+Sub-WBS
+UNIFORMAT family
+MasterFormat division
+system
+subsystem
+construction stage
+
+Possible models:
+
+Logistic Regression
+Random Forest
+Gradient Boosting
+CatBoost
+
+Output:
+
+predicted_class
+probability
+alternative_classes
+feature_evidence
+model_version
+
+Example:
+
+Activity:
+"Install 200 mm chilled water pipe"
+
+Output:
+
+Discipline = HVAC
+Probability = 0.97
+
+System = Chilled Water
+Probability = 0.95
+
+Stage = 1st Fix
+Probability = 0.78
+
+UNIFORMAT = D3040
+Probability = 0.91
+
+If probability is below the configured threshold:
+
+REVIEW_REQUIRED
+
+Do not silently classify uncertain activities.
+
+======================================================================
+44. MACHINE LEARNING TASK — PRODUCTIVITY PREDICTION
+======================================================================
+
+Train regression models using verified historical production records.
+
+Potential target:
+
+DAILY_PRODUCTION
+
+Potential features:
+
+activity family
+quantity
+crew composition
+crew size
+equipment
+equipment capacity
+material
+diameter
+depth
+height
+location
+shift hours
+soil
+access
+congestion
+weather
+project sector
+
+Model output:
+
+predicted productivity
+prediction interval
+confidence
+similar historical records
+model version
+
+Compare prediction with:
+
+PDF SOURCE RATE
+EXCEL RATE
+COMPANY RATE
+PROJECT TARGET
+ACTUAL HISTORICAL
+
+Do NOT automatically replace any of them.
+
+Present all alternatives.
+
+======================================================================
+45. MACHINE LEARNING TASK — CREW RECOMMENDATION
+======================================================================
+
+Learn from:
+
+activity
+quantity
+production
+crew configuration
+equipment
+actual result
+
+Recommend:
+
+crew composition
+crew size
+equipment configuration
+expected daily output
+
+But separate:
+
+SOURCE CREW
+ML RECOMMENDED CREW
+ENGINEER-APPROVED CREW
+
+Never relabel an ML-recommended crew as historical fact.
+
+======================================================================
+46. MACHINE LEARNING TASK — DURATION RISK
+======================================================================
+
+Predict probability that an activity will exceed its planned duration.
+
+Possible features:
+
+planned duration
+quantity
+crew availability
+productivity
+engineering status
+material availability
+procurement status
+workfront status
+total float
+predecessor performance
+historical similar activities
+weather
+congestion
+resource loading
+
+Output:
+
+duration_overrun_probability
+expected_overrun_days
+confidence
+top contributing features
+
+This is a RISK recommendation.
+
+Do not alter Primavera duration automatically.
+
+======================================================================
+47. MACHINE LEARNING TASK — CRITICALITY RISK
+======================================================================
+
+Do NOT replace Primavera CPM.
+
+ML may predict:
+
+probability activity becomes critical;
+probability float is consumed;
+probability milestone becomes delayed.
+
+But:
+
+PRIMAVERA P6 CPM
+remains authoritative for:
+
+Early Dates
+Late Dates
+Total Float
+Longest Path
+Critical Path.
+
+Label ML output:
+
+PREDICTED_CRITICALITY_RISK
+
+not:
+
+CRITICAL_PATH.
+
+======================================================================
+48. MACHINE LEARNING TASK — SCHEDULE LOGIC ASSISTANCE
+======================================================================
+
+ML may learn recurring valid sequencing patterns from approved schedules.
+
+Example:
+
+Excavation
+→ Blinding
+→ Reinforcement
+→ Formwork
+→ Inspection
+→ Concrete
+
+Model output:
+
+suggested predecessor
+suggested successor
+relationship probability
+
+However:
+
+ML SHALL NOT AUTOMATICALLY INSERT LOGIC.
+
+Suggested logic must pass:
+
+engineering rule check;
+constructability check;
+source evidence check;
+user review.
+
+Status:
+
+ML_SUGGESTED
+ENGINEER_APPROVED
+or
+REJECTED.
+
+======================================================================
+49. MACHINE LEARNING TASK — CONSTRUCTABILITY RISK
+======================================================================
+
+Train classifiers on historical constructability findings.
+
+Possible categories:
+
+MISSING_SCOPE
+OUT_OF_SEQUENCE
+ENGINEERING_NOT_READY
+PROCUREMENT_NOT_READY
+ACCESS_CONFLICT
+RESOURCE_OVERLOAD
+EQUIPMENT_LIMITATION
+WEATHER_EXPOSURE
+TRADE_INTERFACE
+COMMISSIONING_GAP
+DEMOBILIZATION_GAP
+
+Output:
+
+finding_probability
+severity_probability
+affected_activity
+historical_similarity
+recommendation
+
+Feed results into:
+
+AACE 48R-06 Constructability Engine.
+
+Deterministic AACE checks and human engineering judgment remain independent.
+
+======================================================================
+50. MACHINE LEARNING TASK — PROCUREMENT RISK
+======================================================================
+
+Predict:
+
+lead-time risk;
+late-delivery probability;
+expected delivery delay;
+supplier/package risk;
+material-readiness risk.
+
+Potential features:
+
+package type
+supplier history
+PO date
+manufacturing duration
+FAT
+shipping route
+customs
+historical delivery performance
+required-on-site date
+engineering approval status
+
+Do not fabricate vendor history.
+
+======================================================================
+51. MACHINE LEARNING TASK — ENGINEERING APPROVAL RISK
+======================================================================
+
+Learn from historical:
+
+shop drawing cycles
+RFI cycles
+material submittals
+review durations
+rejections
+resubmissions
+
+Predict:
+
+approval duration
+resubmission probability
+construction impact probability
+
+Output must remain advisory.
+
+======================================================================
+52. MACHINE LEARNING TASK — ANOMALY DETECTION
+======================================================================
+
+Use unsupervised/anomaly methods to identify unusual:
+
+activity durations
+productivity
+crew sizes
+equipment quantities
+logic density
+lags
+constraints
+float
+resource loading
+procurement durations
+
+Possible model:
+
+IsolationForest
+
+Output:
+
+NORMAL
+UNUSUAL
+HIGHLY_UNUSUAL
+
+Do not automatically call an anomaly an error.
+
+An anomaly means:
+
+REVIEW REQUIRED.
+
+======================================================================
+53. LEARNING FROM ENGINEER DECISIONS
+======================================================================
+
+Every user/engineer decision should become potential supervised-learning
+feedback.
+
+Capture:
+
+suggestion
+model_probability
+engine_recommendation
+user_decision
+ACCEPT / MODIFY / REJECT
+modified_value
+reason
+reviewer
+timestamp
+
+Only approved decisions become eligible training labels.
+
+Example:
+
+ML Suggested:
+Crew A
+
+Engineer:
+MODIFY → Crew B
+
+Training record:
+
+activity features
+original suggestion
+approved Crew B
+reason
+
+Future models may learn this pattern.
+
+======================================================================
+54. LEARNING FROM PRIMAVERA P6 RESULTS
+======================================================================
+
+After XER import and native P6 scheduling, collect where available:
+
+import success
+activity dates
+early dates
+late dates
+total float
+critical status
+longest path
+project finish
+calendar assignment
+logic changes
+user corrections
+
+Compare:
+
+PRE-XER MODEL
+vs
+P6 RESULT.
+
+Store corrections.
+
+The ML engine may learn patterns associated with:
+
+XER import problems;
+calendar problems;
+logic corrections;
+duration corrections;
+activity-code corrections.
+
+Do not attempt to learn Primavera's proprietary CPM calculation as a
+replacement for P6.
+
+Learn how to PREPARE BETTER INPUTS.
+
+======================================================================
+55. LEARNING FROM ACTUAL PROJECT PERFORMANCE
+======================================================================
+
+Create a continuous feedback loop.
+
+PLANNED
+versus
+ACTUAL.
+
+Capture:
+
+planned start
+actual start
+planned finish
+actual finish
+planned duration
+actual duration
+planned quantity
+installed quantity
+planned crew
+actual crew
+planned equipment
+actual equipment
+planned productivity
+actual productivity
+constraints
+weather
+location
+reason for variance
+
+These records become the most valuable learning dataset.
+
+Only use validated actual records.
+
+======================================================================
+56. ONLINE / CONTINUOUS LEARNING POLICY
+======================================================================
+
+Do NOT automatically retrain after every record.
+
+Use controlled learning cycles.
+
+New Evidence
+        ↓
+Validation
+        ↓
+Engineer Approval
+        ↓
+Learning Dataset
+        ↓
+Retraining Trigger
+        ↓
+Candidate Model
+        ↓
+Cross-Validation
+        ↓
+Independent Test
+        ↓
+Compare Against Current Model
+        ↓
+Approve / Reject
+        ↓
+Production Model
+
+Production models must NEVER update themselves silently.
+
+======================================================================
+57. RETRAINING TRIGGERS
+======================================================================
+
+Possible retraining triggers:
+
+N new approved records
+new completed project
+meaningful performance drift
+new project sector
+new activity family
+model accuracy degradation
+new approved crew dataset
+new productivity history
+
+Store trigger configuration.
+
+Example:
+
+minimum_new_records = configurable
+
+Do not hard-code a statistically inappropriate number.
+
+======================================================================
+58. MODEL REGISTRY
+======================================================================
+
+Maintain a model registry.
+
+Required fields:
+
+model_id
+model_name
+task
+algorithm
+dataset_version
+feature_version
+training_date
+training_record_count
+validation_method
+training_metrics
+validation_metrics
+test_metrics
+hyperparameters
+model_file
+model_hash
+status
+approved_by
+approval_date
+superseded_by
+
+Statuses:
+
+TRAINING
+CANDIDATE
+VALIDATION_FAILED
+REVIEW_REQUIRED
+APPROVED
+PRODUCTION
+SUPERSEDED
+REJECTED
+
+Never overwrite a production model.
+
+Create a new version.
+
+======================================================================
+59. DATASET VERSIONING
+======================================================================
+
+Every training dataset receives:
+
+dataset_id
+dataset_version
+creation_date
+record_count
+project_count
+feature_schema
+label_schema
+source_record_ids
+excluded_record_ids
+exclusion_reason
+hash
+
+The exact training dataset used for every model must be reproducible.
+
+======================================================================
+60. MODEL PERSISTENCE
+======================================================================
+
+Use:
+
+joblib
+
+where appropriate for scikit-learn pipelines.
+
+Persist the COMPLETE preprocessing + model pipeline.
+
+Example architecture:
+
+joblib.dump(pipeline, model_path)
+
+and:
+
+pipeline = joblib.load(model_path)
+
+Never load untrusted model files.
+
+Record:
+
+model hash
+version
+training metadata.
+
+======================================================================
+61. CONFIDENCE / ABSTENTION ENGINE
+======================================================================
+
+Every ML recommendation should include confidence.
+
+Possible status:
+
+HIGH_CONFIDENCE
+MEDIUM_CONFIDENCE
+LOW_CONFIDENCE
+OUT_OF_DISTRIBUTION
+INSUFFICIENT_DATA
+ABSTAIN
+
+Configure task-specific thresholds.
+
+Example concept:
+
+IF confidence >= approved high threshold:
+    recommend normally
+
+ELIF confidence >= review threshold:
+    show recommendation + REVIEW_REQUIRED
+
+ELSE:
+    ABSTAIN
+
+The system must be capable of saying:
+
+"I do not have enough evidence."
+
+This is preferable to an invented answer.
+
+======================================================================
+62. OUT-OF-DISTRIBUTION DETECTION
+======================================================================
+
+Detect when a new project/activity is materially different from training data.
+
+Possible differences:
+
+new project sector
+new material
+new diameter range
+new soil condition
+new construction method
+new equipment
+extreme quantity
+new geographic environment
+
+Output:
+
+IN_DISTRIBUTION
+PARTIALLY_OUT_OF_DISTRIBUTION
+OUT_OF_DISTRIBUTION
+
+Reduce confidence accordingly.
+
+Do not extrapolate with false certainty.
+
+======================================================================
+63. MODEL EXPLAINABILITY
+======================================================================
+
+Construction professionals must understand WHY a recommendation was generated.
+
+Provide:
+
+feature importance
+top contributing factors
+similar historical records
+source evidence
+confidence
+model version
+
+Use model-appropriate explainability techniques.
+
+Possible tools:
+
+feature_importances_
+permutation importance
+SHAP if added and technically justified
+
+Example:
+
+Predicted Productivity:
+320 m3/day
+
+Major drivers:
+
+Crew size                 +18%
+2 excavators              +14%
+Normal soil               +10%
+Short haul distance        +7%
+Restricted workfront      -12%
+
+Never show invented causal percentages.
+
+Only display values produced by a legitimate explanation method.
+
+======================================================================
+64. HUMAN-IN-THE-LOOP LEARNING
+======================================================================
+
+The ML engine is subordinate to approved engineering judgment.
+
+Every significant recommendation should support:
+
+ACCEPT
+MODIFY
+REJECT
+HOLD
+
+Record the decision.
+
+Rejected recommendations must NOT become positive training labels.
+
+Modified recommendations should learn the approved value.
+
+======================================================================
+65. MACHINE LEARNING SAFETY BOUNDARY
+======================================================================
+
+ML SHALL NOT determine contractual rights.
+
+ML SHALL NOT make legal determinations.
+
+ML SHALL NOT overwrite approved Primavera logic.
+
+ML SHALL NOT invent project evidence.
+
+ML SHALL NOT manufacture USACE MII rates.
+
+ML SHALL NOT automatically approve schedule changes.
+
+ML SHALL NOT automatically issue an XER as an approved contractual baseline.
+
+It may:
+
+classify;
+predict;
+rank;
+compare;
+identify patterns;
+detect anomalies;
+recommend;
+estimate risk;
+find similar cases.
+
+======================================================================
+66. HYBRID RULE + ML ARCHITECTURE
+======================================================================
+
+Use BOTH:
+
+DETERMINISTIC ENGINEERING RULES
+
+and
+
+PROBABILISTIC MACHINE LEARNING.
+
+Example:
+
+Deterministic Rule:
+
+Quantity = 2,400 m3
+Daily Production = 300 m3/day/crew
+Crews = 2
+
+Duration = 4 days.
+
+ML should NOT replace this calculation.
+
+ML may instead say:
+
+Based on 58 similar historical activities:
+
+Expected Actual Production:
+270-315 m3/day/crew
+
+Probability planned production is achieved:
+72%
+
+This gives intelligence without corrupting deterministic planning.
+
+======================================================================
+67. CONSTRUCTION ML FEATURE STORE
+======================================================================
+
+Create a reusable feature store.
+
+Possible feature groups:
+
+PROJECT FEATURES
+ACTIVITY FEATURES
+QUANTITY FEATURES
+PRODUCTIVITY FEATURES
+CREW FEATURES
+EQUIPMENT FEATURES
+MATERIAL FEATURES
+ENGINEERING FEATURES
+PROCUREMENT FEATURES
+SCHEDULE FEATURES
+RESOURCE FEATURES
+WEATHER FEATURES
+SITE CONDITION FEATURES
+ACTUAL PERFORMANCE FEATURES
+
+Each feature requires:
+
+feature_id
+name
+datatype
+unit
+definition
+source
+calculation
+version
+allowed_null
+quality_rule
+
+======================================================================
+68. LABEL STORE
+======================================================================
+
+Maintain controlled labels for supervised learning.
+
+Possible labels:
+
+approved_activity_class
+approved_WBS
+approved_UNIFORMAT
+approved_rate_basis
+approved_crew
+approved_equipment
+actual_daily_productivity
+actual_duration
+delay_occurred
+delay_days
+criticality_event
+constructability_finding
+procurement_delay
+engineering_approval_duration
+
+Every label needs evidence.
+
+======================================================================
+69. MISSING DATA PROCESSING
+======================================================================
+
+Do not automatically fill engineering/project facts using statistical imputation.
+
+Distinguish:
+
+ML FEATURE IMPUTATION
+
+from:
+
+PROJECT EVIDENCE.
+
+For ML preprocessing, numeric missing features may be statistically imputed
+where appropriate.
+
+However, imputed values must NEVER be written back to the evidence database
+as factual project information.
+
+Example:
+
+ML may internally impute a missing numerical feature.
+
+Application evidence must still display:
+
+MISSING.
+
+======================================================================
+70. CLASS IMBALANCE
+======================================================================
+
+For classification tasks with rare events such as:
+
+major delays
+constructability failures
+critical procurement failures
+
+evaluate class imbalance.
+
+Possible techniques:
+
+class_weight
+resampling
+appropriate metrics
+
+Do not report accuracy alone.
+
+A model predicting "no delay" for 95% of cases can have high accuracy while
+being useless.
+
+======================================================================
+71. DRIFT DETECTION
+======================================================================
+
+Monitor:
+
+DATA DRIFT
+FEATURE DRIFT
+LABEL DRIFT
+PERFORMANCE DRIFT
+
+Example:
+
+Historical productivity model trained on buildings may degrade when applied to
+heavy infrastructure.
+
+Track performance by:
+
+project sector
+discipline
+activity family
+location
+time period
+
+Trigger review/retraining when material degradation occurs.
+
+======================================================================
+72. MODEL COMPARISON
+======================================================================
+
+Do not assume Random Forest is always best.
+
+For every task compare appropriate models.
+
+Example regression comparison:
+
+Linear Regression
+Random Forest
+Gradient Boosting
+XGBoost
+LightGBM
+CatBoost
+
+Example classification comparison:
+
+Logistic Regression
+Random Forest
+Gradient Boosting
+XGBoost
+CatBoost
+
+Select based on:
+
+validation performance
+generalization
+interpretability
+training data volume
+inference speed
+maintenance complexity.
+
+======================================================================
+73. DEEP LEARNING GATE
+======================================================================
+
+Use PyTorch only when the dataset and task justify neural networks.
+
+Potential future applications:
+
+drawing understanding
+complex document classification
+large historical schedule-pattern learning
+sequence modeling
+multimodal project evidence
+
+Do not replace effective classical ML with neural networks without evidence of
+performance improvement.
+
+======================================================================
+74. ML DASHBOARD
+======================================================================
+
+Add an ML Intelligence tab.
+
+Display:
+
+MODEL STATUS
+DATASET STATUS
+TRAINING RECORD COUNT
+VALIDATION PERFORMANCE
+TEST PERFORMANCE
+CURRENT MODEL VERSION
+LAST TRAIN DATE
+MODEL CONFIDENCE
+DRIFT STATUS
+OUT-OF-DISTRIBUTION STATUS
+NEW APPROVED LEARNING RECORDS
+NEXT RETRAINING ELIGIBILITY
+
+Per recommendation display:
+
+Prediction
+Confidence
+Alternative
+Evidence
+Similar historical cases
+Model
+Model version
+Engineer decision
+
+======================================================================
+75. LEARNING CENTER
+======================================================================
+
+Add a Learning Center to the application.
+
+Sections:
+
+NEW LEARNING CANDIDATES
+APPROVED TRAINING DATA
+REJECTED TRAINING DATA
+MODEL TRAINING
+MODEL VALIDATION
+MODEL COMPARISON
+MODEL REGISTRY
+MODEL DRIFT
+ENGINEER FEEDBACK
+HISTORICAL PERFORMANCE
+
+Provide full auditability.
+
+======================================================================
+76. MACHINE LEARNING DATABASE TABLES
+======================================================================
+
+ADD, without removing existing tables:
+
+ml_training_record
+ml_feature_definition
+ml_feature_value
+ml_label
+ml_dataset
+ml_dataset_record
+ml_model
+ml_model_version
+ml_training_run
+ml_validation_run
+ml_prediction
+ml_prediction_explanation
+ml_engineer_feedback
+ml_drift_record
+ml_ood_record
+ml_retraining_trigger
+
+Each prediction must retain:
+
+prediction_id
+model_version
+input_feature_snapshot
+predicted_value
+probability
+confidence
+timestamp
+project
+activity
+review_status
+engineer_decision
+
+======================================================================
+77. AUTOMATIC LEARNING FEEDBACK PIPELINE
+======================================================================
+
+After project execution:
+
+ACTUAL FIELD DATA
+        ↓
+VALIDATION
+        ↓
+MATCH TO SCHEDULE ACTIVITY
+        ↓
+COMPARE PLANNED VS ACTUAL
+        ↓
+CREATE ML LEARNING CANDIDATE
+        ↓
+ENGINEER REVIEW
+        ↓
+APPROVE
+        ↓
+TRAINING DATASET
+        ↓
+RETRAIN CANDIDATE MODEL
+        ↓
+VALIDATE
+        ↓
+COMPARE WITH CURRENT MODEL
+        ↓
+PROMOTE ONLY IF BETTER AND APPROVED
+
+======================================================================
+78. ML + PRIMAVERA PIPELINE
+======================================================================
+
+The complete application pipeline becomes:
+
+SOURCE FILES
+        ↓
+DATA ANALYZER
+        ↓
+RAW EVIDENCE VAULT
+        ↓
+NORMALIZATION
+        ↓
+MASTER ACTIVITY ENGINE
+        ↓
+ML ACTIVITY CLASSIFICATION
+        ↓
+ENGINEERING ENGINE
+        ↓
+ML ENGINEERING-RISK PREDICTION
+        ↓
+PROCUREMENT ENGINE
+        ↓
+ML PROCUREMENT-RISK PREDICTION
+        ↓
+PRODUCTIVITY ENGINE
+        ↓
+ML PRODUCTIVITY PREDICTION
+        ↓
+CREW ENGINE
+        ↓
+ML CREW RECOMMENDATION
+        ↓
+EQUIPMENT ENGINE
+        ↓
+MATERIAL ENGINE
+        ↓
+QUANTITY / BASE-TIME ENGINE
+        ↓
+DETERMINISTIC DURATION ENGINE
+        ↓
+ML DURATION-RISK ENGINE
+        ↓
+CONSTRUCTION SEQUENCE ENGINE
+        ↓
+ML LOGIC SUGGESTION
+        ↓
+AACE 38R-06
+        ↓
+AACE 48R-06
+        ↓
+ML CONSTRUCTABILITY-RISK ENGINE
+        ↓
+SCHEDULE QA
+        ↓
+ML ANOMALY DETECTION
+        ↓
+ENGINEER DECISION
+        ↓
+PRIMAVERA SCHEDULE MODEL
+        ↓
+XER VALIDATION
+        ↓
+XER CREATOR
+        ↓
+P6 NATIVE CPM
+        ↓
+POST-P6 QA
+        ↓
+ACTUAL PROJECT RESULTS
+        ↓
+CONTROLLED MACHINE LEARNING LOOP
+
+======================================================================
+79. REQUIRED ML SELF-TESTS
+======================================================================
+
+Add automated tests for:
+
+data loading
+missing values
+feature preprocessing
+categorical encoding
+scaling
+PCA where enabled
+train/test isolation
+group leakage
+pipeline serialization
+model loading
+model prediction
+probability output
+confidence thresholds
+abstention
+OOD detection
+cross-validation
+GridSearchCV
+model registry
+dataset versioning
+engineer feedback
+drift detection
+retraining
+rejected-model rollback
+
+The engine must refuse production promotion if mandatory tests fail.
+
+======================================================================
+80. ML ACCEPTANCE CRITERIA
+======================================================================
+
+The Machine Learning implementation is NOT complete unless:
+
+[ ] Genuine trained models exist.
+[ ] Models use historical/approved data rather than only hard-coded rules.
+[ ] Training data are versioned.
+[ ] Feature definitions are controlled.
+[ ] Labels are traceable.
+[ ] Train/test separation exists.
+[ ] Leakage checks exist.
+[ ] Cross-validation exists where appropriate.
+[ ] Classification metrics exist.
+[ ] Regression metrics exist.
+[ ] Hyperparameter tuning exists.
+[ ] Overfitting is measured.
+[ ] Underfitting is measured.
+[ ] Confidence is reported.
+[ ] Low-confidence predictions can abstain.
+[ ] OOD detection exists.
+[ ] Feature explanations exist.
+[ ] Model versions exist.
+[ ] Model registry exists.
+[ ] Engineer feedback is stored.
+[ ] Approved feedback can become training data.
+[ ] Rejected feedback does not become positive training data.
+[ ] Actual productivity feeds future learning.
+[ ] P6 outcomes feed preparation-quality learning.
+[ ] Drift monitoring exists.
+[ ] Retraining is controlled.
+[ ] New models are tested against the current production model.
+[ ] Failed candidate models cannot replace production models.
+[ ] Source evidence is never changed by ML.
+[ ] Primavera CPM is never replaced by ML.
+[ ] Deterministic engineering calculations remain deterministic.
+[ ] Complete prediction audit trails exist.
+
+======================================================================
+81. FINAL LEARNING OBJECTIVE
+======================================================================
+
+Build a system that becomes progressively more intelligent with every
+VALIDATED and APPROVED project record.
+
+The objective is:
+
+NOT:
+
+"AI guesses the schedule."
+
+The objective is:
+
+PROJECT EVIDENCE
+        ↓
+ENGINEERING KNOWLEDGE
+        ↓
+STRUCTURED HISTORICAL DATA
+        ↓
+MACHINE LEARNING
+        ↓
+PROBABILISTIC RECOMMENDATION
+        ↓
+ENGINEERING VALIDATION
+        ↓
+PRIMAVERA P6
+        ↓
+ACTUAL RESULT
+        ↓
+VERIFIED LEARNING
+        ↓
+BETTER NEXT RECOMMENDATION.
+
+The system must learn from:
+
+what was planned;
+what was recommended;
+what the engineer accepted;
+what the engineer rejected;
+what the engineer modified;
+what Primavera produced;
+what happened on site;
+which crew actually performed the work;
+how much quantity was actually achieved;
+how long the work actually took;
+which equipment was actually used;
+which constraints occurred;
+which engineering approvals were late;
+which procurement packages were late;
+which activities became critical;
+which constructability problems occurred;
+and what final action resolved them.
+
+======================================================================
+82. ABSOLUTE ML GOVERNANCE RULE
+======================================================================
+
+100% LEARNING means:
+
+100% of VALIDATED + APPROVED + TRAINING-ELIGIBLE evidence shall be capable
+of entering the controlled learning system.
+
+It DOES NOT mean:
+
+100% predictive accuracy.
+
+Never falsify accuracy.
+
+Never hide uncertainty.
+
+Never allow ML to rewrite evidence.
+
+Never allow unvalidated records to poison the training dataset.
+
+Never allow test-set leakage.
+
+Never allow rejected engineering recommendations to become approved labels.
+
+Never allow an inferior candidate model to automatically replace a superior
+production model.
+
+Never allow ML to replace Primavera CPM.
+
+Never allow ML to replace professional planning and construction judgment.
+
+The final system must therefore be:
+
+EVIDENCE-FIRST
++
+DETERMINISTIC WHERE ENGINEERING FORMULAS APPLY
++
+PROBABILISTIC WHERE PREDICTION IS APPROPRIATE
++
+CONTINUOUSLY LEARNING
++
+HUMAN-GOVERNED
++
+PRIMAVERA-VERIFIED
++
+FULLY TRACEABLE.
